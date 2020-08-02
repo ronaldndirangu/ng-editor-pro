@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'home',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
+    loadChildren: './modules/home/home.module#HomeModule'
   }
 ];
 

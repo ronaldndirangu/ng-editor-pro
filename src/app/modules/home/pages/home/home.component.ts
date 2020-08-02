@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.auth.user$.subscribe(async user => {
       if (user && user.uid) {
-        this.notes.readUserNote(user.uid).subscribe(data => {
+        this.notes.readUserNote(user.uid).subscribe((data: any) => {
           // Throttle auto save
           const throttledAutoSave = MediumEditor.util.throttle((evt) => {
             this.saveNote(evt.target.innerHTML, user.uid);
