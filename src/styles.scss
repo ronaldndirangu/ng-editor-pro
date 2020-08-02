@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css');
+@import url('https://cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/themes/beagle.css');
+
+//Remove blue outline in Chrome
+div:focus {outline: 0;}
 
 html, 
 body { height: 100%; background: #F8F8F8; }
