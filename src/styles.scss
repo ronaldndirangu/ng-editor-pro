@@ -2,6 +2,8 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 @import url('https://cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css');
 @import url('https://cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/themes/beagle.css');
+@import '~katex/dist/katex.css';
+
 
 //Remove blue outline in Chrome
 div:focus {outline: 0;}

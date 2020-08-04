@@ -1,4 +1,6 @@
 <section class="container">
-  <div class="editor" #editable>
+  <div class="editor__input" #editable>
   </div>
+  <ng-katex-html class="editor__preview" [html]="savedNote ? savedNote : '<p></p>'">
+  </ng-katex-html>
 </section>

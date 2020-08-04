@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   editor: any;
   savedNote: any;
 
-  @ViewChild('editable', { static: true }) editable: ElementRef;
+  @ViewChild('editable', { static: true }) editable: any;
 
   constructor(private notes: NotesService, private auth: AuthService) { }
 
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
           // Throttle auto save
           const throttledAutoSave = MediumEditor.util.throttle((evt) => {
             this.saveNote(evt.target.innerHTML, user.uid);
-          }, 2000); // 2 second delay
+          }, 1000); // 1 second delay
 
           this.editor = new MediumEditor(this.editable.nativeElement, {
             delay: 1000,
@@ -39,8 +39,10 @@ export class HomeComponent implements OnInit {
 
           if (data) {
             // Set editor content to saved content
+            this.savedNote = data.note;
             this.editor.setContent(data.note);
           }
+
         });
       }
     });
